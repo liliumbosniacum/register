@@ -1,7 +1,7 @@
 package com.lilium.register.service.person.converter;
 
 import com.lilium.register.document.person.PersonDocument;
-import com.lilium.register.rest.dto.PersonDTO;
+import com.lilium.register.rest.person.dto.PersonDTO;
 import org.springframework.stereotype.Component;
 
 @Component

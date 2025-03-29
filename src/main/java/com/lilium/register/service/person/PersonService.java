@@ -2,7 +2,7 @@ package com.lilium.register.service.person;
 
 import com.lilium.register.document.person.PersonDocument;
 import com.lilium.register.document.person.PersonRepository;
-import com.lilium.register.rest.dto.PersonDTO;
+import com.lilium.register.rest.person.dto.PersonDTO;
 import com.lilium.register.service.person.converter.PersonDTOConverter;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.lilium.register.rest.dto;
+package com.lilium.register.rest.person.dto;
 
 public class PersonDTO {
     private String id;

@@ -1,6 +1,6 @@
-package com.lilium.register.rest.controller;
+package com.lilium.register.rest.person.controller;
 
-import com.lilium.register.rest.dto.PersonDTO;
+import com.lilium.register.rest.person.dto.PersonDTO;
 import com.lilium.register.service.person.PersonService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
