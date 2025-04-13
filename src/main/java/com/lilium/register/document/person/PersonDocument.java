@@ -1,21 +1,13 @@
 package com.lilium.register.document.person;
 
+import com.lilium.register.document.AbstractDocument;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Mapping;
 
 @Document(indexName = "person")
 @Mapping(mappingPath = "static/person.json")
-public class PersonDocument {
-    private String id;
+public class PersonDocument extends AbstractDocument {
     private String name;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

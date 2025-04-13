@@ -1,16 +1,9 @@
 package com.lilium.register.rest.person.dto;
 
-public class PersonDTO {
-    private String id;
+import com.lilium.register.rest.dto.BaseDTO;
+
+public class PersonDTO extends BaseDTO {
     private String name;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
