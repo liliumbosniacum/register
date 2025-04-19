@@ -48,7 +48,8 @@ public class IndexService {
         try {
             client.indices()
                     .create(c -> c.index(indexInfo.name())
-                    .mappings(t -> t.withJson(getMappings(indexInfo.mappingPath()))));
+                    .settings(s -> s.withJson(getAsInputStream("static/settings.json")))
+                    .mappings(t -> t.withJson(getAsInputStream(indexInfo.mappingPath()))));
         } catch (Exception e) {
             LOG.error("{}", e.getMessage(), e);
         }
@@ -105,9 +106,9 @@ public class IndexService {
         return annotation.mappingPath();
     }
 
-    private InputStream getMappings(final String mappingPath) {
+    private InputStream getAsInputStream(final String jsonFilePath) {
         try {
-            Resource resource = resourceLoader.getResource("classpath:" + mappingPath);
+            final Resource resource = resourceLoader.getResource("classpath:" + jsonFilePath);
             return resource.getInputStream();
         } catch (Exception e) {
             LOG.error("{}", e.getMessage(), e);
